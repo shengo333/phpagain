@@ -1,35 +1,43 @@
 <?php 
 
+//classes
+
+class User {
+
+    public $email;
+    public $name;
+
+    public function __construct($name,$email){
+	    // $this->name = 'mario';
+		// $this->email = 'mario@thenetninja.co.uk';
+        $this->name = $name;
+		$this->email = $email;
+    }
+
+    public function login(){
+
+        // echo 'user has logged in';
+        echo $this->name . 'logged in';
+    }
+}
+
+// $userOne = new User();
+
+// $userOne->login();
+
+// echo $userOne->name;
+// echo $userOne->email;
+
+$userTwo = new User('shengo','bekashengelia@gmail.com');
+
+// echo $userTwo->name;
+// echo $userTwo->email;
 
 
- $file = 'quotes.txt';
+ $userTwo->login();
 
 
- //opening file for read
 
- $handle = fopen('quotes.txt', 'a+');
-
- //read the file
-
- //echo fread($handle,filesize($file));
- //echo fread($handle,112);
-
- //read single line
-//  echo fgets($handle);
-//  echo fgets($handle);
-
- //read single character
- 
-//  echo fgetc($handle);
- 
-
-//writing to the file
-
-//fwrite($handle, "\nEverithing popular is wrong")
-
-fclose($handle);
-
-unlink($file);
 
 ?>
 
